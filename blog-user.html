@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- 首页 -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="author" content="">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!-- 标题 -->
+	<title>PRINT科技商城</title>
+	<!-- google字体 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
+	<!-- bootstrap的样式 -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- 我的样式 -->
+	<link rel="stylesheet" type="text/css" href="css/vendor.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<!-- 图标 -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+	<symbol id="logo-github" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+        <title>GitHub</title><path fill="currentColor" fill-rule="currentColor" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"/>
+    </symbol>
+    <symbol id="logo-csdn" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+        <title>CSDN</title><path fill="currentColor" fill-rule="currentColor" d="M256 0c141.4 0 256 114.6 256 256s-114.6 256-256 256S0 397.4 0 256 114.6 0 256 0zm95 376l5.6-54.1c-16 4.8-50.5 8.1-73.9 8.1-67.2 0-102.9-23.6-97.7-73.2 5.8-55.3 56.6-72.8 116.3-72.8 27.4 0 61.2 4.4 75.6 9.2L384 136.4c-21.7-5.2-44.9-8.4-84.2-8.4-101.6 0-194.4 47.4-203.2 131.7-7.4 70.7 55.7 124.4 171.8 124.4 40.3 0 69.2-3.2 83.2-8z"/>
+    </symbol>
+  	<symbol id="person" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Login</title><path fill="currentColor" d="M332.64 64.58C313.18 43.57 286 32 256 32c-30.16 0-57.43 11.5-76.8 32.38c-19.58 21.11-29.12 49.8-26.88 80.78C156.76 206.28 203.27 256 256 256s99.16-49.71 103.67-110.82c2.27-30.7-7.33-59.33-27.03-80.6ZM432 480H80a31 31 0 0 1-24.2-11.13c-6.5-7.77-9.12-18.38-7.18-29.11C57.06 392.94 83.4 353.61 124.8 326c36.78-24.51 83.37-38 131.2-38s94.42 13.5 131.2 38c41.4 27.6 67.74 66.93 76.18 113.75c1.94 10.73-.68 21.34-7.18 29.11A31 31 0 0 1 432 480Z"/>
+  	</symbol>
+  	<symbol id="search" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Search</title><path fill="currentColor" d="M456.69 421.39L362.6 327.3a173.81 173.81 0 0 0 34.84-104.58C397.44 126.38 319.06 48 222.72 48S48 126.38 48 222.72s78.38 174.72 174.72 174.72A173.81 173.81 0 0 0 327.3 362.6l94.09 94.09a25 25 0 0 0 35.3-35.3ZM97.92 222.72a124.8 124.8 0 1 1 124.8 124.8a124.95 124.95 0 0 1-124.8-124.8Z"/>
+  	</symbol>
+  	<symbol id="cart" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Cart</title><circle cx="176" cy="416" r="32" fill="currentColor"/><circle cx="400" cy="416" r="32" fill="currentColor"/><path fill="currentColor" d="M456.8 120.78a23.92 23.92 0 0 0-18.56-8.78H133.89l-6.13-34.78A16 16 0 0 0 112 64H48a16 16 0 0 0 0 32h50.58l45.66 258.78A16 16 0 0 0 160 368h256a16 16 0 0 0 0-32H173.42l-5.64-32h241.66A24.07 24.07 0 0 0 433 284.71l28.8-144a24 24 0 0 0-5-19.93Z"/>
+  	</symbol>
+  	<symbol id="long-arrow-alt-left" xmlns="http://www.w3.org/2000/svg" class="la" viewBox="0 0 32 32">
+        <title>Long Arrow Left</title><path fill="currentColor" d="M10.813 9.281L4.093 16l6.72 6.719l1.406-1.438L7.938 17H28v-2H7.937l4.282-4.281z"/>
+    </symbol>
+    <symbol id="long-arrow-alt-right" xmlns="http://www.w3.org/2000/svg" class="la" viewBox="0 0 32 32">
+    	<title>Long Arrow Right</title><path fill="currentColor" d="M21.188 9.281L19.78 10.72L24.063 15H4v2h20.063l-4.282 4.281l1.407 1.438L27.905 16z"/>
+    </symbol>
+  	<symbol id="caret-down" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Caret Down</title><path fill="currentColor" d="m98 190.06l139.78 163.12a24 24 0 0 0 36.44 0L414 190.06c13.34-15.57 2.28-39.62-18.22-39.62h-279.6c-20.5 0-31.56 24.05-18.18 39.62Z"/>
+  	</symbol>
+  	<symbol id="arrow-back" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Arrow Back</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292"/>
+  	</symbol>
+  	<symbol id="arrow-forward" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Arrow Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="m268 112l144 144l-144 144m124-144H100"/>
+  	</symbol>
+  	<symbol id="chevron-forward" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="m184 112l144 144l-144 144"/>
+  	</symbol>
+  	<symbol id="play" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Play</title><path fill="currentColor" d="M133 440a35.37 35.37 0 0 1-17.5-4.67c-12-6.8-19.46-20-19.46-34.33V111c0-14.37 7.46-27.53 19.46-34.33a35.13 35.13 0 0 1 35.77.45l247.85 148.36a36 36 0 0 1 0 61l-247.89 148.4A35.5 35.5 0 0 1 133 440Z"/>
+  	</symbol>
+  	<symbol id="menu-sharp" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Menu</title><path fill="currentColor" d="M64 384h384v-42.67H64Zm0-106.67h384v-42.66H64ZM64 128v42.67h384V128Z"/>
+  	</symbol>
+  	<symbol id="close-sharp" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Cross</title><path fill="currentColor" d="M400 145.49L366.51 112L256 222.51L145.49 112L112 145.49L222.51 256L112 366.51L145.49 400L256 289.49L366.51 400L400 366.51L289.49 256L400 145.49z"/>
+  	</symbol>
+</svg>
+
+<!-- 加载动画 -->
+<div id="preloader">
+  <div id="loader"></div>
+</div>
+
+<!-- 搜索弹窗 -->
+<div class="search-popup" id="searchPopup">
+  <div class="search-popup-container">
+    <h3 class="my-3">科技搜索</h3>
+    <form role="search" method="get" class="search-form" action="">
+        <input type="search" id="search-form" class="search-field" placeholder="搜索" value="" name="s" />
+        <button type="submit" class="search-submit">
+	        <a href="javascript:void(0)" class="search-button">
+	          <svg class="bi" width="20" height="20"><use xlink:href="#search"></use></svg>
+	        </a>
+	    </button>
+    </form>
+  </div>
+</div>
+
+<!-- 头部 -->
+<header id="header-wrap">
+	<div class="top-header bg-dark">
+		<div class="container py-2 d-flex justify-content-between text-white">
+			<div class="secondary-nav">
+				<ul class="d-flex m-0 list-unstyled">
+					<li><a href="javascript:void(0)">关于我们</a></li>
+					<li><a href="javascript:void(0)">隐私政策</a></li>
+					<li><a href="javascript:void(0)">联系我们</a></li>
+					<li><a href="javascript:void(0)">使用条款</a></li>
+				</ul>
+			</div>
+			<div class="social-share">
+				<ul class="d-flex flex-wrap m-0 list-unstyled">
+					<li><a href="https://github.com/851543"><svg class="bi" width="16" height="16"><use xlink:href="#logo-github"></use></svg></a></li>
+					<li><a href="https://blog.csdn.net/weixin_67623295?type=blog"><svg class="bi" width="16" height="16"><use xlink:href="#logo-csdn"></use></svg></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<nav id="header-nav" class="navbar navbar-expand-lg py-4">
+		<div class="container align-items-center">
+			<a class="navbar-brand" href="index.html">
+				<!-- logo图片 -->
+				<img src="images/logo.png" class="logo">
+			</a>
+			<button class="navbar-toggler d-flex d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+		    	<svg class="bi" width="36" height="36"><use xlink:href="#menu-sharp"></use></svg>
+		 	</button>
+			<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+				<div class="offcanvas-header justify-content-end">
+	              <button type="button" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar">
+	              	<svg class="bi" width="36" height="36"><use xlink:href="#close-sharp"></use></svg>
+	              </button>
+	            </div>
+				<div class="offcanvas-body justify-content-end">
+					<!-- 导航 -->
+					<ul id="navbar" class="navbar-nav d-flex justify-content-end flex-wrap list-unstyled m-0">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">首页</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="shop.html">商店</a>
+						</li>
+				        <li class="nav-item dropdown">
+				         	<a class="nav-link" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="true">文章<svg class="bi" width="10" height="10"><use xlink:href="#caret-down"></use></svg></a>
+							<ul class="dropdown-menu" data-bs-popper="none">
+					          	<li><a href="blog-user.html" class="dropdown-item">用户 </a></li>
+					          	<li><a href="blog.html" class="dropdown-item">官方 </a></li>
+					        </ul>
+				        </li>
+						<li class="nav-item">
+							<a class="nav-link" href="about.html">关于我们</a>
+						</li>
+						
+						<li class="nav-item">
+		                  <div class="user-items">
+		                    <ul class="d-flex justify-content-end list-unstyled m-0">
+		                      <li>
+		                        <a href="login.html">
+		                          <svg class="bi" width="20" height="20"><use xlink:href="#person"></use></svg>
+		                        </a>
+		                      </li>
+		                      <li>
+		                        <a href="javascript:void(0)" class="search-button">
+		                          <svg class="bi" width="20" height="20"><use xlink:href="#search"></use></svg>
+		                        </a>
+		                      </li>
+		                      <li>
+		                        <a href="cart.html">
+		                          <svg class="bi" width="20" height="20"><use xlink:href="#cart"></use></svg>
+		                        </a>
+		                      </li>
+		                    </ul>
+		                  </div>
+		                </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<section id="latest-posts" class="latest-posts margin-large">
+	<div class="container">
+		<div class="row entry-container">
+			<div class="post-item entry-item col-md-4">
+				<figure class="zoom-effect">
+					<a href="javascript:void(0)" class="zoom-in"><img src="images/postitem9.jpg" alt="stories" class="blogImg img-fluid"></a>
+				</figure>
+				<div class="story-title-wrap mt-3">
+					<div class="post-meta"><a href="blog.html">科技</a></div>
+					<h3 class="story-title"><a href="javascript:void(0)">智能机械手的未来发展趋势</a></h3>				
+					<div class="entry-meta">
+						<span class="author"><span class="sp">知乎</span><span class="author-name">陈智远</span></span>
+						<span class="meta-date"><span class="sp">-</span><time class="published" datetime="">2024年1月15日</time></span>
+					</div>
+				</div>
+			</div>
+			<div class="videos-carousel entry-item col-md-4"">
+				<div class="post-item">
+					<figure class="zoom-effect">
+						<a  type="button" class="video-btn zoom-in" data-bs-toggle="modal" data-src="video/test01.mp4" data-bs-target="#myModal">
+							<img src="images/videoitem1.jpg" alt="stories" class="blogImg img-fluid">
+							<svg class="bi" width="34" height="34"><use xlink:href="#play"></use></svg>								
+						</a>
+					</figure>
+					<div class="story-title-wrap mt-3">
+						<div class="post-meta"><a href="blog.html">视频</a></div>
+						<h3 class="story-title"><a href="javascript:void(0)">VR技术在日常生活中的应用</a></h3>				
+						<div class="entry-meta">
+							<span class="author"><span class="sp">抖音</span><span class="author-name">林虚拟</span></span>
+							<span class="meta-date"><span class="sp">-</span><time class="published" datetime="">2024年3月8日</time></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="post-item entry-item col-md-4">
+				<figure class="zoom-effect">
+					<a href="javascript:void(0)" class="zoom-in"><img src="images/postitem10.jpg" alt="stories" class="blogImg img-fluid"></a>
+				</figure>
+				<div class="story-title-wrap mt-3">
+					<div class="post-meta"><a href="blog.html">智能家居</a></div>
+					<h3 class="story-title"><a href="javascript:void(0)">HomePod智能音箱深度评测</a></h3>				
+					<div class="entry-meta">
+						<span class="author"><span class="sp">小红书</span><span class="author-name">苏音乐</span></span>
+						<span class="meta-date"><span class="sp">-</span><time class="published" datetime="">2024年2月21日</time></span>
+					</div>
+				</div>
+			</div>
+			<div class="post-item entry-item col-md-4">
+				<figure class="zoom-effect">
+					<a href="javascript:void(0)" class="zoom-in"><img src="images/postitem11.jpg" alt="stories" class="blogImg img-fluid"></a>
+				</figure>
+				<div class="story-title-wrap mt-3">
+					<div class="post-meta"><a href="blog.html">科技</a></div>
+					<h3 class="story-title"><a href="javascript:void(0)">智能机器人关节技术突破性进展</a></h3>				
+					<div class="entry-meta">
+						<span class="author"><span class="sp">微信公众号</span><span class="author-name">张机器人</span></span>
+						<span class="meta-date"><span class="sp">-</span><time class="published" datetime="">2024年4月3日</time></span>
+					</div>
+				</div>
+			</div>
+			<div class="post-item entry-item col-md-4">
+				<figure class="zoom-effect">
+					<a href="javascript:void(0)" class="zoom-in"><img src="images/postitem12.jpg" alt="stories" class="blogImg img-fluid"></a>
+				</figure>
+				<div class="story-title-wrap mt-3">
+					<div class="post-meta"><a href="blog.html">数码</a></div>
+					<h3 class="story-title"><a href="javascript:void(0)">智能手表与手机的完美配合指南</a></h3>				
+					<div class="entry-meta">
+						<span class="author"><span class="sp">哔哩哔哩</span><span class="author-name">王数码</span></span>
+						<span class="meta-date"><span class="sp">-</span><time class="published" datetime="">2024年1月30日</time></span>
+					</div>
+				</div>
+			</div>
+			<div class="videos-carousel entry-item col-md-4"">
+				<div class="post-item">
+					<figure class="zoom-effect">
+						<a  type="button" class="video-btn zoom-in" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/W_tIumKa8VY" data-bs-target="#myModal">
+							<img src="images/videoitem3.jpg" alt="stories" class="blogImg img-fluid">
+							<svg class="bi" width="34" height="34"><use xlink:href="#play"></use></svg>								
+						</a>
+					</figure>
+					<div class="story-title-wrap mt-3">
+						<div class="post-meta"><a href="blog.html">视频</a></div>
+						<h3 class="story-title"><a href="javascript:void(0)">无人机航拍技巧大揭秘</a></h3>				
+						<div class="entry-meta">
+							<span class="author"><span class="sp">快手</span><span class="author-name">李航拍</span></span>
+							<span class="meta-date"><span class="sp">-</span><time class="published" datetime="">2024年3月15日</time></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="post-item entry-item col-md-4">
+				<figure class="zoom-effect">
+					<a href="javascript:void(0)" class="zoom-in"><img src="images/postitem13.jpg" alt="stories" class="blogImg img-fluid"></a>
+				</figure>
+				<div class="story-title-wrap mt-3">
+					<div class="post-meta"><a href="blog.html">摄影</a></div>
+					<h3 class="story-title"><a href="javascript:void(0)">数码相机的专业摄影技巧分享</a></h3>				
+					<div class="entry-meta">
+						<span class="author"><span class="sp">豆瓣</span><span class="author-name">周摄影</span></span>
+						<span class="meta-date"><span class="sp">-</span><time class="published" datetime="">2024年2月28日</time></span>
+					</div>
+				</div>
+			</div>
+			<div class="videos-carousel entry-item col-md-4">
+				<div class="post-item">
+					<figure class="zoom-effect">
+						<a type="button" class="video-btn zoom-in" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/W_tIumKa8VY" data-bs-target="#myModal">
+							<img src="images/videoitem2.jpg" alt="stories" class="blogImg img-fluid">
+							<svg class="bi" width="34" height="34"><use xlink:href="#play"></use></svg>								
+						</a>
+					</figure>
+					<div class="story-title-wrap mt-3">
+						<div class="post-meta"><a href="blog.html">游戏</a></div>
+						<h3 class="story-title"><a href="javascript:void(0)">次世代游戏手柄深度体验</a></h3>				
+						<div class="entry-meta">
+							<span class="author"><span class="sp">虎牙直播</span><span class="author-name">刘游戏</span></span>
+							<span class="meta-date"><span class="sp">-</span><time class="published" datetime="">2024年4月1日</time></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="post-item entry-item col-md-4">
+				<figure class="zoom-effect">
+					<a href="javascript:void(0)" class="zoom-in"><img src="images/postitem14.jpg" alt="stories" class="blogImg img-fluid"></a>
+				</figure>
+				<div class="story-title-wrap mt-3">
+					<div class="post-meta"><a href="blog.html">科技</a></div>
+					<h3 class="story-title"><a href="javascript:void(0)">人工智能在家居中的创新应用</a></h3>				
+					<div class="entry-meta">
+						<span class="author"><span class="sp">CSDN</span><span class="author-name">赵科技</span></span>
+						<span class="meta-date"><span class="sp">-</span><time class="published" datetime="">2024年3月25日</time></span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+        <nav class="navigation paging-navigation text-center padding-medium" role="navigation">
+          <div class="pagination loop-pagination d-flex justify-content-center align-items-center">
+            <a href="javascript:void(0)" class="pe-3">
+              <svg class="bi" width="30" height="30"><use xlink:href="#long-arrow-alt-left"></use></svg>
+            </a>
+            <span aria-current="page" class="page-numbers current pe-3">1</span>
+            <a class="page-numbers pe-3" href="javascript:void(0)">2</a>
+            <a class="page-numbers pe-3" href="javascript:void(0)">3</a>
+            <a class="page-numbers pe-3" href="javascript:void(0)">4</a>
+            <a class="page-numbers" href="javascript:void(0)">5</a>
+            <a href="javascript:void(0)" class="ps-3">
+              <svg class="bi" width="30" height="30"><use xlink:href="#long-arrow-alt-right"></use></svg>
+            </a>
+          </div>
+        </nav>
+	</div>
+</section>
+
+<!-- 底部 -->
+<footer id="footer" class="padding-large">
+
+	<div class="container">
+	    <div class="row">
+
+	      <div class="col-md-3 mb-5">
+			<a href="index.html"><img src="images/logo-light.png" class="logo"></a>
+			<p>伟大的公司都是把好东西越做越便宜，把每一份精力都专心投入做好产品，让用户付出的每一分钱都足有所值。</p>
+	      </div>
+
+	      <div class="col-md-3 mb-5">
+	        <h5>更多内容</h5>
+	        <ul class="nav flex-column">
+	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">iPhones</a></li>
+	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">MacBook</a></li>
+	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">最佳笔记本电脑</a></li>
+	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">最佳电视优惠</a></li>
+	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">最佳Macbook优惠</a></li>
+	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">eBay优惠券</a></li>
+	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Amazon优惠券</a></li>
+	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">笔记本电脑优惠券</a></li>	          
+	        </ul>
+	      </div>
+
+	      <div class="col-md-3 mb-5">
+	        <h5>关于我们</h5>
+	        <ul class="nav flex-column">
+	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">广告</a></li>
+	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">更多关于我们</a></li>
+	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">时事通讯</a></li>
+	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">职业发展</a></li>
+	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">帮助中心</a></li>
+	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">联系我们</a></li>
+	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">站点地图</a></li>
+	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">许可证</a></li>	          
+	        </ul>
+	      </div>
+
+	      <div class="col-md-3 mb-5">
+	        <h5>政策</h5>
+	        <ul class="nav flex-column">
+	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">隐私政策</a></li>
+	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">使用条款</a></li>
+	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Cookies</a></li>
+	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">信息</a></li>
+	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">合规性</a></li>
+	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">GDPR政策</a></li>
+	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">销售信息</a></li>
+	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">版权</a></li>
+	        </ul>
+	      </div>
+
+	    </div>
+	</div>
+</footer>
+
+<!-- 视频窗口 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	   <div class="modal-content">
+		   <div class="modal-body">
+			   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="bi" width="40" height="40"><use xlink:href="#close-sharp"></use></svg></button>
+			   <div class="ratio ratio-16x9">
+				 <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+			   </div>    
+			 </div>
+	   </div>
+   </div>
+</div>
+
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

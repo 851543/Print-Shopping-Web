@@ -1,15 +1,3 @@
-/*
-Theme Name: TechLight
-Theme URI: https://templatesjungle.com/
-Author: TemplatesJungle
-Author URI: https://templatesjungle.com/
-Description: TechLight is a free tech blog HTML CSS website template by TemplatesJungle.
-Version: 1.1
-*/
-
-/*--------------------------------------------------------------
-/** Base Styles
---------------------------------------------------------------*/
 :root {
   --accent-color: #222222;
   --grey-color: #444444;
@@ -704,8 +692,6 @@ button.btn-bg-white:hover{
   cursor: pointer;
 }
 
-/* -- Products For Sale Section
---------------------------------------------------------------*/
 .product-card h3{
   margin-bottom: 0;
 }
@@ -720,11 +706,6 @@ button.btn-bg-white:hover{
 .product-card {
   cursor: pointer;
 }
-/* Link Effect
- - Place anywhere you want your link to animate
- - Add data-after="Any text" to the link within the class
- - Use span within the anchor tag for the effect to work
-------------------------------------------------------------- */
 .link-effect a {
    position: relative;
    padding: 0;
@@ -752,9 +733,6 @@ button.btn-bg-white:hover{
 .link-effect:hover a::after {
   transform: translateY(0%);
 }
-
-/* -- Footer Section
---------------------------------------------------------------*/
 #footer {
   background-color: var(--accent-color);
 }
@@ -780,15 +758,12 @@ button.btn-bg-white:hover{
   margin-bottom: 12px;
 }
 
-/* Comment section */
 .commentorImg {
   width: 50px;
   height: 50px;
   margin-right: 20px;
 }
 
-/* Bootstrap theme override 
---------------------------------------------------------------*/
 .accordion-button:not(.collapsed) {
   color: var(--grey-color);
   background-color: transparent;
@@ -845,7 +820,6 @@ button.btn-bg-white:hover{
   border-top: 1px solid #3b3e42!important;
 }
 
-/* Modal override */
 .modal{
   background: rgb(40 40 40 / 80%);
 }
@@ -877,17 +851,12 @@ button.btn-bg-white:hover{
   opacity: none;
 }
 
-/* ------ Quantity ------*/
 .cart-product-quantity {
   max-width: 200px;
 }
 .cart-product-quantity input{
   padding-left: 10px; 
 }
-
-/*--------------------------------------------------------------
-/** About Page
---------------------------------------------------------------*/
 .icon-box .icon-box-icon svg {
   width: 26px;
   height: 26px;
@@ -923,20 +892,12 @@ button.btn-bg-white:hover{
 .page-numbers.current {
   color: var(--accent-color);
 }
-
-/*--------------------------------------------------------------
-/** Shop Page
---------------------------------------------------------------*/
 #newsletter.bg-light #newsletter1:focus{
   border: 1px solid var(--accent-color);
 }
 #newsletter.bg-light .button.btn-bg-dark{
   border: 0;
 }
-
-/*--------------------------------------------------------------
-/** Shop Page
---------------------------------------------------------------*/
 .sidebar svg.search {
   width: 20px;
   height: 20px;
@@ -974,13 +935,6 @@ textarea:focus,
     padding-right: 0!important;
   }
 }
-
-/*--------------------------------------------------------------
-/* Single Product
---------------------------------------------------------------*/
-
-/** Single Product
---------------------------------------------------------------*/
 .single-product .large-swiper{
   padding-left: 0;
 }
@@ -992,8 +946,6 @@ textarea:focus,
 .swiper-slide-thumb-active img{
   border: 1px solid var(--accent-color);
 }
-
-/*---- Single Product Information ----------*/
 .rating-container .rating {
   padding-right: 10px;
   color: var(--accent-color);
@@ -1006,8 +958,6 @@ textarea:focus,
 .product-info .select-item{
   margin-right: 8px;
 }
-
-/*---- Product Tabs ----------*/
 .nav-tabs .nav-link {
   color: var(--accent-color);
   font-weight: 600;
@@ -1051,10 +1001,21 @@ textarea:focus,
     display: none;
   }
 }
-
-/*--------------------------------------------------------------
-/* Single Post
---------------------------------------------------------------*/
 .post-wrap .post-item .meta-date a{
   font-size: inherit;
 }
+.dropdown > .dropdown-menu > li {
+  padding: 5px;
+  margin: 5px;
+}
+.zoom-effect, .slider-img {
+    border: 1px solid #007bff; 
+    border-radius: 3px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s; 
+    outline: 2px solid transparent;
+  }
+  .zoom-effect:hover, .slider-img:hover {
+    transform: scale(1.05); 
+    outline: 2px solid #ffcc00; 
+  }
