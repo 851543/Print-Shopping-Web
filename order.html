@@ -19,6 +19,7 @@
 		rel="stylesheet">
 	<!-- bootstrap的样式 -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-icons.css" rel="stylesheet">
 	<!-- 我的样式 -->
 	<link rel="stylesheet" type="text/css" href="css/vendor.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
@@ -26,7 +27,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 </head>
-<section class="order-payment padding-large">
+<section class="order-payment padding-medium">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-8">
@@ -57,11 +58,11 @@
           </div>
         </div>
 
-        <!-- 支付宝支付按钮 -->
+        <!-- 支付按钮 -->
         <div class="text-center">
-          <button id="aliPayBtn" class="btn btn-primary btn-lg px-5">
+          <button id="aliPayBtn" class="btn btn-primary btn-lg px-5" onclick="handlePayment()">
             <i class="bi bi-credit-card me-2" style="font-size: 24px;"></i>
-            支付宝支付
+            支付
           </button>
         </div>
 
@@ -86,7 +87,7 @@
                     </div>
                   </div>
                   <div class="d-flex">
-                    <img src="images/cart-item2.jpg" alt="���能相机" style="width: 60px; height: 60px; object-fit: cover;">
+                    <img src="images/cart-item2.jpg" alt="智能相机" style="width: 60px; height: 60px; object-fit: cover;">
                     <div class="ms-3">
                       <h6 class="mb-1">智能相机</h6>
                       <p class="text-muted mb-0">¥5999.00 × 1</p>
@@ -96,9 +97,9 @@
                 <!-- 收货信息 -->
                 <div>
                   <h5 class="mb-3">收货信息</h5>
-                  <p class="mb-1"><strong>收货人：</strong>张三</p>
+                  <p class="mb-1"><strong>收货人：</strong>阿俊</p>
                   <p class="mb-1"><strong>联系电话：</strong>138****5678</p>
-                  <p class="mb-0"><strong>收货地址：</strong>广东省深圳市南山区科技园路1号 A栋501室</p>
+                  <p class="mb-0"><strong>收货地址：</strong>广西南宁市西乡塘区大学东路176号广西农业职业技术大学校园快递服务中心</p>
                 </div>
               </div>
             </div>
@@ -109,131 +110,32 @@
   </div>
 </section>
 
-<!-- 引入支付宝 JS SDK -->
-<script src="https://gw.alipayobjects.com/as/g/h5-lib/alipayjsapi/3.1.1/alipayjsapi.min.js"></script>
+<!-- 返回顶部火箭按钮 -->
+<button id="backToTop" class="btn btn-primary back-to-top" title="返回顶部">
+  <i class="bi bi-rocket-takeoff"></i>
+</button>
+
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/script.js"></script>
 
 <script>
-// 订单信息
-const orderInfo = {
-    outTradeNo: '2024031912345678', // 商户订单号
-    totalAmount: '13999.00',         // 订单金额
-    subject: 'PRINT科技商城订单',     // 订单标题
-    body: '智能机器人×1,智能相机×1'   // 订单描述
-};
-
-// 支付宝支付配置
-const alipayConfig = {
-    // 这些参数需要从后端获取，这里仅作示例
-    appId: '2021000122123456',             // 支付宝沙箱 APPID
-    gateway: 'https://openapi.alipaydev.com/gateway.do', // 支付宝沙箱网关
-    returnUrl: 'http://你的域名/order-success.html',     // 支付成功后跳转页面
-    notifyUrl: 'http://你的域名/api/notify'              // 支付结果通知地址
-};
-
-// 初始化支付按钮点击事件
-document.getElementById('aliPayBtn').addEventListener('click', function() {
-    initAlipay();
-});
-
-// 初始化支付宝支付
-async function initAlipay() {
-    try {
-        // 构建支付请求参数
-        const payParams = {
-            method: 'alipay.trade.page.pay',          // 统一收单下单并支付页面接口
-            app_id: alipayConfig.appId,               // APPID
-            timestamp: new Date().toISOString(),      // 发送请求时间
-            version: '1.0',                           // 接口版本
-            biz_content: JSON.stringify({
-                out_trade_no: orderInfo.outTradeNo,   // 商户订单号
-                product_code: 'FAST_INSTANT_TRADE_PAY',// 产品码
-                total_amount: orderInfo.totalAmount,   // 订单金额
-                subject: orderInfo.subject,            // 订单标题
-                body: orderInfo.body                   // 订单描述
-            }),
-            return_url: alipayConfig.returnUrl,       // 同步返回地址
-            notify_url: alipayConfig.notifyUrl        // 异步通知地址
-        };
-
-        // 创建临时表单提交
-        const form = document.createElement('form');
-        form.method = 'POST';
-        form.action = alipayConfig.gateway;
-        form.target = '_blank';
-
-        // 添加参数到表单
-        for (let key in payParams) {
-            const input = document.createElement('input');
-            input.type = 'hidden';
-            input.name = key;
-            input.value = payParams[key];
-            form.appendChild(input);
-        }
-
-        // 提交表单
-        document.body.appendChild(form);
-        form.submit();
-        document.body.removeChild(form);
-
-        // 开始轮询订单状态
-        startCheckOrderStatus(orderInfo.outTradeNo);
-
-    } catch (error) {
-        console.error('支付初始化失败:', error);
-        alert('支付初始化失败，请稍后重试');
-    }
-}
-
-// 轮询检查订单状态
-function startCheckOrderStatus(orderNo) {
-    const checkInterval = setInterval(async () => {
-        try {
-            // 这里应该调用你的后端 API 检查订单状态
-            const response = await fetch(`/api/check-order-status?orderNo=${orderNo}`);
-            const result = await response.json();
-            
-            if (result.status === 'TRADE_SUCCESS') {
-                // 支付成功
-                clearInterval(checkInterval);
-                window.location.href = 'order-success.html';
-            } else if (result.status === 'TRADE_CLOSED') {
-                // 订单关闭
-                clearInterval(checkInterval);
-                alert('支付已取消');
-            }
-        } catch (error) {
-            console.error('检查订单状态失败:', error);
-        }
-    }, 3000); // 每3秒检查一次
-
-    // 15分钟后停止轮询
-    setTimeout(() => {
-        clearInterval(checkInterval);
-    }, 15 * 60 * 1000);
-}
-
-// 倒计时代码保持不变
-function startCountdown() {
-  let minutes = 14;
-  let seconds = 59;
-  
-  const countdownEl = document.getElementById('countdown');
-  const interval = setInterval(() => {
-    if (seconds === 0) {
-      if (minutes === 0) {
-        clearInterval(interval);
-        window.location.href = 'order-expired.html';
-        return;
-      }
-      minutes--;
-      seconds = 59;
-    } else {
-      seconds--;
-    }
+function handlePayment() {
+    // 获取支付按钮
+    const payBtn = document.getElementById('aliPayBtn');
     
-    countdownEl.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-  }, 1000);
-}
+    // 禁用按钮并显示加载状态
+    payBtn.disabled = true;
+    payBtn.innerHTML = `
+        <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+        支付处理中...
+    `;
 
-document.addEventListener('DOMContentLoaded', startCountdown);
-</script> 
+    // 模拟支付过程（2秒后跳转）
+    setTimeout(() => {
+        // 支付成功后跳转到成功页面
+        window.location.href = 'order-success.html';
+    }, 2000);
+}
+</script>

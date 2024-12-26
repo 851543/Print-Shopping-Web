@@ -19,6 +19,7 @@
 		rel="stylesheet">
 	<!-- bootstrap的样式 -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-icons.css" rel="stylesheet">
 	<!-- 我的样式 -->
 	<link rel="stylesheet" type="text/css" href="css/vendor.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
@@ -173,7 +174,7 @@
 		</div>
 	</nav>
 </header>
-<section class="checkout-wrap padding-large">
+<section class="checkout-wrap padding-medium">
     <div class="container">
       <div class="row">
         <div class="col-lg-8">
@@ -251,10 +252,41 @@
             <h3 class="mb-3">支付方式</h3>
             <div class="card">
               <div class="card-body">
-                <div class="form-check mb-2">
+                <!-- 支付宝 -->
+                <div class="form-check mb-3">
                   <input class="form-check-input" type="radio" name="payment" id="alipay" checked>
-                  <label class="form-check-label" for="alipay">
+                  <label class="form-check-label d-flex align-items-center" for="alipay">
+                    <i class="fab fa-alipay text-primary me-2 fs-4"></i>
                     支付宝
+                    <span class="badge bg-primary ms-2">推荐</span>
+                  </label>
+                </div>
+                
+                <!-- 微信支付 -->
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="radio" name="payment" id="wechat">
+                  <label class="form-check-label d-flex align-items-center" for="wechat">
+                    <i class="fab fa-weixin text-success me-2 fs-4"></i>
+                    微信支付
+                  </label>
+                </div>
+
+                <!-- 银联支付 -->
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="radio" name="payment" id="unionpay">
+                  <label class="form-check-label d-flex align-items-center" for="unionpay">
+                    <i class="bi bi-credit-card me-2 fs-4"></i>
+                    银联支付
+                  </label>
+                </div>
+
+                <!-- 货到付款 -->
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="payment" id="cod">
+                  <label class="form-check-label d-flex align-items-center" for="cod">
+                    <i class="bi bi-cash-coin me-2 fs-4"></i>
+                    货到付款
+                    <small class="text-muted ms-2">(仅支持部分地区)</small>
                   </label>
                 </div>
               </div>
@@ -291,8 +323,9 @@
       </div>
     </div>
   </section>
-  <!-- 底部 -->
-<footer id="footer" class="padding-large">
+  
+<!-- 底部 -->
+<footer id="footer" class="padding-medium">
 
 	<div class="container">
 	    <div class="row">
@@ -330,23 +363,31 @@
 	        </ul>
 	      </div>
 
-	      <div class="col-md-3 mb-5">
-	        <h5>政策</h5>
-	        <ul class="nav flex-column">
-	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">隐私政策</a></li>
-	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">使用条款</a></li>
-	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Cookies</a></li>
-	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">信息</a></li>
-	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">合规性</a></li>
-	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">GDPR政策</a></li>
-	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">销售信息</a></li>
-	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">版权</a></li>
-	        </ul>
-	      </div>
+	            <div class="col-md-3 mb-5">
+        <h5>政策</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">隐私政策</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">使用条款</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Cookies</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">信息</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">合规性</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">GDPR政策</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">销售信息</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">版权</a></li>
+        </ul>
+      </div>
 
-	    </div>
-	</div>
+    </div>
+  </div>
+
+  	<!-- 添加呼吸动画分隔线 -->
+	<div class="breathing-line"></div>
 </footer>
+
+<!-- 返回顶部火箭按钮 -->
+<button id="backToTop" class="btn btn-primary back-to-top" title="返回顶部">
+  <i class="bi bi-rocket-takeoff"></i>
+</button>
 
 <script src="js/jquery-1.11.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

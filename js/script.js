@@ -42,6 +42,25 @@
         ╚═╝     ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝   ╚═╝   
     `);
 
+    const backToTop = $('#backToTop');
+    
+    // 监听滚动事件
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 300) {
+        backToTop.fadeIn();
+      } else {
+        backToTop.fadeOut();
+      }
+    });
+    
+    // 点击返回顶部
+    backToTop.click(function() {
+      $('html, body').animate({
+        scrollTop: 0
+      }, 500);
+      return false;
+    });
+
     var $videoSrc;  
     $('.video-btn').click(function() {
         $videoSrc = $(this).data( "src" );

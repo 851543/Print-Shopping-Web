@@ -19,6 +19,7 @@
 		rel="stylesheet">
 	<!-- bootstrap的样式 -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-icons.css" rel="stylesheet">
 	<!-- 我的样式 -->
 	<link rel="stylesheet" type="text/css" href="css/vendor.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
@@ -45,7 +46,7 @@
         <title>Long Arrow Left</title><path fill="currentColor" d="M10.813 9.281L4.093 16l6.72 6.719l1.406-1.438L7.938 17H28v-2H7.937l4.282-4.281z"/>
     </symbol>
     <symbol id="long-arrow-alt-right" xmlns="http://www.w3.org/2000/svg" class="la" viewBox="0 0 32 32">
-    	<title>Long Arrow Right</title><path fill="currentColor" d="M21.188 9.281L19.78 10.72L24.063 15H4v2h20.063l-4.282 4.281l1.407 1.438L27.905 16z"/>
+    	<title>Long Arrow Right</title><path fill="currentColor" d="m21.188 9.281L19.78 10.72L24.063 15H4v2h20.063l-4.282 4.281l1.407 1.438L27.905 16z"/>
     </symbol>
   	<symbol id="caret-down" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
 		<title>Caret Down</title><path fill="currentColor" d="m98 190.06l139.78 163.12a24 24 0 0 0 36.44 0L414 190.06c13.34-15.57 2.28-39.62-18.22-39.62h-279.6c-20.5 0-31.56 24.05-18.18 39.62Z"/>
@@ -173,16 +174,21 @@
 	</nav>
 </header>
 
-<section id="intro" class="bg-light padding-large">
+<section id="intro" class="bg-light padding-medium">
   <div class="container">
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
         
         <div class="page-title text-center">
-          <h2>Login</h2>
+          <h2>用户中心</h2>
           <div class="breadcum-items">
-            <span class="item colored"><a href="javascript:void(0)">Login / </a></span>
-            <span class="item"><a href="javascript:void(0)">Register</a></span>
+            <span class="item colored nav-link active" id="nav-sign-in-tab-top" data-bs-toggle="tab" data-bs-target="#nav-sign-in" role="tab" aria-controls="nav-sign-in" aria-selected="true">
+              <a href="javascript:void(0)">登录</a>
+            </span>
+            <span class="mx-2">/</span>
+            <span class="item nav-link" id="nav-register-tab-top" data-bs-toggle="tab" data-bs-target="#nav-register" role="tab" aria-controls="nav-register" aria-selected="false">
+              <a href="javascript:void(0)">注册</a>
+            </span>
           </div>
         </div>
 
@@ -191,14 +197,14 @@
   </div>
 </section>
 
-<section class="login-tabs padding-large">
+<section class="login-tabs padding-medium">
   <div class="container">
     <div class="row">
       <div class="tabs-listing">
         <nav>
           <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
-            <button class="nav-link active" id="nav-sign-in-tab" data-bs-toggle="tab" data-bs-target="#nav-sign-in" type="button" role="tab" aria-controls="nav-sign-in" aria-selected="true">登录</button>
-            <button class="nav-link" id="nav-register-tab" data-bs-toggle="tab" data-bs-target="#nav-register" type="button" role="tab" aria-controls="nav-register" aria-selected="false">注册</button>
+            <button class="nav-link active" id="nav-sign-in-tab-main" data-bs-toggle="tab" data-bs-target="#nav-sign-in" type="button" role="tab" aria-controls="nav-sign-in" aria-selected="true">登录</button>
+            <button class="nav-link" id="nav-register-tab-main" data-bs-toggle="tab" data-bs-target="#nav-register" type="button" role="tab" aria-controls="nav-register" aria-selected="false">注册</button>
           </div>
         </nav>
         <div class="tab-content" id="nav-tabContent">
@@ -295,8 +301,9 @@
   </div>
 </section>
 
+
 <!-- 底部 -->
-<footer id="footer" class="padding-large">
+<footer id="footer" class="padding-medium">
 
 	<div class="container">
 	    <div class="row">
@@ -334,23 +341,31 @@
 	        </ul>
 	      </div>
 
-	      <div class="col-md-3 mb-5">
-	        <h5>政策</h5>
-	        <ul class="nav flex-column">
-	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">隐私政策</a></li>
-	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">使用条款</a></li>
-	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Cookies</a></li>
-	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">信息</a></li>
-	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">合规性</a></li>
-	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">GDPR政策</a></li>
-	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">销售信息</a></li>
-	          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">版权</a></li>
-	        </ul>
-	      </div>
+	            <div class="col-md-3 mb-5">
+        <h5>政策</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">隐私政策</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">使用条款</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Cookies</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">信息</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">合规性</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">GDPR政策</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">销售信息</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">版权</a></li>
+        </ul>
+      </div>
 
-	    </div>
-	</div>
+    </div>
+  </div>
+
+  	<!-- 添加呼吸动画分隔线 -->
+	<div class="breathing-line"></div>
 </footer>
+
+<!-- 返回顶部火箭按钮 -->
+<button id="backToTop" class="btn btn-primary back-to-top" title="返回顶部">
+  <i class="bi bi-rocket-takeoff"></i>
+</button>
 
 <script src="js/jquery-1.11.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

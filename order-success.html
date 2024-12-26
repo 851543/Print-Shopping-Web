@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支付成功 - PRINT科技商城</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <section class="payment-success padding-medium">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <!-- 成功图标 -->
+                    <div class="success-icon mb-4">
+                        <i class="bi bi-check-circle-fill text-success" style="font-size: 5rem;"></i>
+                    </div>
+
+                    <!-- 成功提示 -->
+                    <h2 class="mb-3">支付成功！</h2>
+                    <p class="text-muted mb-4">感谢您的购买，我们会尽快为您发货</p>
+
+                    <!-- 订单信息 -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6 border-end">
+                                    <div class="text-muted mb-2">订单号</div>
+                                    <h5>2024031912345678</h5>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="text-muted mb-2">支付金额</div>
+                                    <h5 class="text-primary">¥13,999.00</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 按钮组 -->
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="index.html" class="btn btn-outline-primary">
+                            <i class="bi bi-house me-2"></i>
+                            返回首页
+                        </a>
+                        <a href="cart.html" class="btn btn-primary">
+                            <i class="bi bi-list-ul me-2"></i>
+                            查看订单
+                        </a>
+                    </div>
+
+                    <!-- 温馨提示 -->
+                    <div class="alert alert-light mt-4">
+                        <h6 class="alert-heading mb-2">
+                            <i class="bi bi-info-circle me-2"></i>
+                            温馨提示
+                        </h6>
+                        <p class="small mb-0">
+                            您的订单预计3-5个工作日内送达，请保持手机畅通。<br>
+                            如有问题请联系客服：400-123-4567
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+    // 自动跳转计时器（可选）
+    setTimeout(() => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const redirect = urlParams.get('redirect');
+        if (redirect) {
+            window.location.href = redirect;
+        }
+    }, 5000); // 5秒后自动跳转
+    </script>
+</body>
+</html> 
