@@ -51,24 +51,43 @@
     });
   });
 
-    const backToTop = $('#backToTop');
+  const backToTop = $('#backToTop');
     
-    // 监听滚动事件
-    $(window).scroll(function() {
-      if ($(this).scrollTop() > 300) {
-        backToTop.fadeIn();
-      } else {
-        backToTop.fadeOut();
+  // 监听滚动事件
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 1000) {
+      backToTop.fadeIn();
+    } else {
+      backToTop.fadeOut();
+    }
+  });
+  
+  // 点击返回顶部并添加发射效果
+  backToTop.click(function(e) {
+    e.preventDefault();
+    
+    // 添加发射动画类
+    $(this).addClass('launching');
+    
+    // 立即开始滚动到顶部，与发射动画同步
+    $('html, body').animate({
+      scrollTop: 0
+    }, {
+      duration: 1500,
+      easing: 'easeInOutQuad', // 使用缓动效果使动画更自然
+      complete: function() {
+        // 滚动完成后重置火箭状态
+        backToTop.removeClass('launching')
+                 .removeAttr('style')
+                 .css({
+                   'background-color': '#0d6efd',
+                   'color': '#fff'
+                 });
       }
     });
     
-    // 点击返回顶部
-    backToTop.click(function() {
-      $('html, body').animate({
-        scrollTop: 0
-      }, 500);
-      return false;
-    });
+    return false;
+  });
 
     var $videoSrc;  
     $('.video-btn').click(function() {
@@ -328,4 +347,10 @@
     
     requestAnimationFrame(animate);
   }
+
+  // 添加 jQuery easing 函数
+  $.easing.easeInOutQuad = function (x, t, b, c, d) {
+    if ((t/=d/2) < 1) return c/2*t*t + b;
+    return -c/2 * ((--t)*(t-2) - 1) + b;
+  };
 })(jQuery);
