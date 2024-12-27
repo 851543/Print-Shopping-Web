@@ -23,10 +23,10 @@
 ## 核心功能展示
 
 ### 1. 首页轮播图 
-![首页](../png/index.png)
-![商店](../png/shop.png)
-![商品详情](../png/shop-single.png)
-![支付详情](../png/order.png)
+![首页](png/index.png)
+![商店](png/shop.png)
+![商品详情](png/shop-single.png)
+![支付详情](png/order.png)
 
 特点:
 - 移动端优先设计
