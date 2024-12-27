@@ -1154,3 +1154,245 @@ textarea:focus,
   }
 }
 
+/* 飞行图片样式 */
+.fly-img {
+  pointer-events: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: none !important;
+}
+
+/* 购物车抖动动画 */
+@keyframes cartShake {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}
+
+.cart-shake {
+  animation: cartShake 0.5s ease-in-out;
+}
+/* 标签基础样式 */
+.product-tag {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 5px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  z-index: 10;
+  border: 2px solid;
+}
+
+/* 热销标签 - 红色闪光效果 */
+.hot-tag {
+  background: #ff4e50;
+  color: #fff;
+  border-color: #f9d423;
+  text-shadow: 0 0 10px rgba(255, 78, 80, 0.5);
+  animation: hotTextGlow 2s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(255, 78, 80, 0.3);
+}
+
+/* 新品标签 - 蓝色闪光效果 */
+.new-tag {
+  background: #0072ff;
+  color: #fff;
+  border-color: #00c6ff;
+  text-shadow: 0 0 10px rgba(0, 198, 255, 0.5);
+  animation: newTextGlow 2s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(0, 198, 255, 0.3);
+}
+
+/* 低价标签 - 绿色闪光效果 */
+.sale-tag {
+  background: #11998e;
+  color: #fff;
+  border-color: #38ef7d;
+  text-shadow: 0 0 10px rgba(56, 239, 125, 0.5);
+  animation: saleTextGlow 2s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(56, 239, 125, 0.3);
+}
+
+/* 文字闪光动画 */
+@keyframes hotTextGlow {
+  0%, 100% {
+    border-color: #f9d423;
+    text-shadow: 0 0 10px rgba(255, 78, 80, 0.5);
+    box-shadow: 0 0 10px rgba(255, 78, 80, 0.3);
+  }
+  50% {
+    border-color: #ff4e50;
+    text-shadow: 0 0 20px rgba(255, 78, 80, 0.8),
+                 0 0 30px rgba(255, 78, 80, 0.6);
+    box-shadow: 0 0 20px rgba(255, 78, 80, 0.6);
+  }
+}
+
+@keyframes newTextGlow {
+  0%, 100% {
+    border-color: #00c6ff;
+    text-shadow: 0 0 10px rgba(0, 198, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 198, 255, 0.3);
+  }
+  50% {
+    border-color: #0072ff;
+    text-shadow: 0 0 20px rgba(0, 198, 255, 0.8),
+                 0 0 30px rgba(0, 198, 255, 0.6);
+    box-shadow: 0 0 20px rgba(0, 198, 255, 0.6);
+  }
+}
+
+@keyframes saleTextGlow {
+  0%, 100% {
+    border-color: #38ef7d;
+    text-shadow: 0 0 10px rgba(56, 239, 125, 0.5);
+    box-shadow: 0 0 10px rgba(56, 239, 125, 0.3);
+  }
+  50% {
+    border-color: #11998e;
+    text-shadow: 0 0 20px rgba(56, 239, 125, 0.8),
+                 0 0 30px rgba(56, 239, 125, 0.6);
+    box-shadow: 0 0 20px rgba(56, 239, 125, 0.6);
+  }
+}
+
+/* 悬停效果 */
+.product-tag:hover {
+  animation-duration: 1s;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* 科技创新导航项样式 */
+.tech-innovation {
+  position: relative;
+  margin-right: 20px;
+}
+
+.tech-text {
+  position: relative;
+  color: #00c6ff !important;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  animation: fastTextPulse 1s infinite linear;
+}
+
+.tech-icon {
+  margin-right: 8px;
+  font-size: 1.2em;
+  animation: microShake 0.5s infinite linear;
+}
+
+.tech-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(0, 198, 255, 0.2), transparent);
+  filter: blur(4px);
+  animation: glowScan 3s infinite;
+}
+
+/* 高频微抖动 */
+@keyframes microShake {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-0.5px, -0.5px);
+  }
+  50% {
+    transform: translate(0.5px, 0.5px);
+  }
+  75% {
+    transform: translate(-0.5px, 0.5px);
+  }
+}
+
+/* 快速文字发光 */
+@keyframes fastTextPulse {
+  0%, 100% {
+    color: #00c6ff;
+    text-shadow: 0 0 5px rgba(0, 198, 255, 0.6);
+  }
+  50% {
+    color: #0072ff;
+    text-shadow: 0 0 8px rgba(0, 198, 255, 0.8),
+                 0 0 12px rgba(0, 198, 255, 0.4);
+  }
+}
+
+/* 扫光动画 */
+@keyframes glowScan {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(0) skewX(-15deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%) skewX(-15deg);
+    opacity: 0;
+  }
+}
+
+/* 悬停效果 */
+.tech-innovation:hover .tech-text {
+  animation: fastTextPulse 1s infinite;
+}
+
+.tech-innovation:hover .tech-icon {
+  animation: microShake 0.3s infinite linear;
+}
+
+.tech-innovation:hover .tech-glow {
+  animation: glowScan 1.5s infinite;
+}
+
+/* 修改文字和图标的抖动动画 */
+@keyframes iconShake {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(-2px, -2px) rotate(-15deg);
+  }
+  75% {
+    transform: translate(2px, 2px) rotate(15deg);
+  }
+}
+
+/* 整体文字抖动效果 */
+.tech-innovation a {
+  animation: microTextShake 0.5s infinite linear;
+}
+
+@keyframes microTextShake {
+  0%, 100% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(-0.5px);
+  }
+  75% {
+    transform: translate(0.5px);
+  }
+}
+
+/* 悬停加强效果 */
+.tech-innovation:hover a {
+  animation: microTextShake 0.3s infinite linear;
+}
+
+.tech-innovation:hover .tech-icon {
+  animation: microShake 0.3s infinite linear;
+}
+
+
+

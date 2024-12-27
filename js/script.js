@@ -42,6 +42,15 @@
         ╚═╝     ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝   ╚═╝   
     `);
 
+  // 为所有加入购物车按钮添加点击事件
+  const addToCartButtons = document.querySelectorAll('[data-after="加入购物车"]');
+  addToCartButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      flyToCart(this);
+    });
+  });
+
     const backToTop = $('#backToTop');
     
     // 监听滚动事件
@@ -243,4 +252,80 @@
     
   });
 
+  function flyToCart(button) {
+    // 获取当前商品图片
+    const productImg = button.closest('.product-card').querySelector('img') || 
+                      document.querySelector('.large-swiper .swiper-slide-active img');
+    // 获取购物车图标
+    const cart = document.querySelector('.d-flex .justify-content-end li:last-child');
+    
+    // 创建飞行图片
+    const flyImg = productImg.cloneNode();
+    flyImg.classList.add('fly-img');
+    
+    // 获取起始和结束位置
+    const startPos = productImg.getBoundingClientRect();
+    const endPos = cart.getBoundingClientRect();
+    
+    // 设置初始样式
+    Object.assign(flyImg.style, {
+      'position': 'fixed',
+      'z-index': '1000',
+      'left': startPos.left + 'px',
+      'top': startPos.top + 'px',
+      'width': '100px',
+      'height': '100px',
+      'object-fit': 'cover',
+      'border-radius': '50%',
+    });
+    
+    document.body.appendChild(flyImg);
+    
+    // 下抛物线动画
+    const start = {
+      x: startPos.left,
+      y: startPos.top
+    };
+    
+    const end = {
+      x: endPos.left,
+      y: endPos.top
+    };
+    
+    // 控制点（抛物线底点）
+    const control = {
+      x: (start.x + end.x) / 2,
+      y: Math.max(start.y, end.y) + 100
+    };
+    
+    const duration = 800;
+    const startTime = Date.now();
+    
+    function animate() {
+      const progress = (Date.now() - startTime) / duration;
+      
+      if (progress >= 1) {
+        flyImg.remove();
+        cart.classList.add('cart-shake');
+        setTimeout(() => cart.classList.remove('cart-shake'), 500);
+        return;
+      }
+      
+      const t = progress;
+      const x = Math.pow(1 - t, 2) * start.x + 2 * (1 - t) * t * control.x + Math.pow(t, 2) * end.x;
+      const y = Math.pow(1 - t, 2) * start.y + 2 * (1 - t) * t * control.y + Math.pow(t, 2) * end.y;
+      
+      Object.assign(flyImg.style, {
+        'left': x + 'px',
+        'top': y + 'px',
+        'width': (100 - 50 * progress) + 'px',
+        'height': (100 - 50 * progress) + 'px',
+        'opacity': 1 - 0.5 * progress
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    requestAnimationFrame(animate);
+  }
 })(jQuery);

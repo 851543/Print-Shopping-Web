@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- 首页 -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="author" content="">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!-- 标题 -->
+	<title>PRINT科技商城</title>
+	<!-- google字体 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
+	<!-- bootstrap的样式 -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-icons.css" rel="stylesheet">
+	<link href="css/bootstrap-icons.css" rel="stylesheet">
+	<!-- 我的样式 -->
+	<link rel="stylesheet" type="text/css" href="css/vendor.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<!-- 图标 -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+	<symbol id="logo-github" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+        <title>GitHub</title><path fill="currentColor" fill-rule="currentColor" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"/>
+    </symbol>
+    <symbol id="logo-csdn" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+        <title>CSDN</title><path fill="currentColor" fill-rule="currentColor" d="M256 0c141.4 0 256 114.6 256 256s-114.6 256-256 256S0 397.4 0 256 114.6 0 256 0zm95 376l5.6-54.1c-16 4.8-50.5 8.1-73.9 8.1-67.2 0-102.9-23.6-97.7-73.2 5.8-55.3 56.6-72.8 116.3-72.8 27.4 0 61.2 4.4 75.6 9.2L384 136.4c-21.7-5.2-44.9-8.4-84.2-8.4-101.6 0-194.4 47.4-203.2 131.7-7.4 70.7 55.7 124.4 171.8 124.4 40.3 0 69.2-3.2 83.2-8z"/>
+    </symbol>
+  	<symbol id="person" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Login</title><path fill="currentColor" d="M332.64 64.58C313.18 43.57 286 32 256 32c-30.16 0-57.43 11.5-76.8 32.38c-19.58 21.11-29.12 49.8-26.88 80.78C156.76 206.28 203.27 256 256 256s99.16-49.71 103.67-110.82c2.27-30.7-7.33-59.33-27.03-80.6ZM432 480H80a31 31 0 0 1-24.2-11.13c-6.5-7.77-9.12-18.38-7.18-29.11C57.06 392.94 83.4 353.61 124.8 326c36.78-24.51 83.37-38 131.2-38s94.42 13.5 131.2 38c41.4 27.6 67.74 66.93 76.18 113.75c1.94 10.73-.68 21.34-7.18 29.11A31 31 0 0 1 432 480Z"/>
+  	</symbol>
+  	<symbol id="search" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Search</title><path fill="currentColor" d="M456.69 421.39L362.6 327.3a173.81 173.81 0 0 0 34.84-104.58C397.44 126.38 319.06 48 222.72 48S48 126.38 48 222.72s78.38 174.72 174.72 174.72A173.81 173.81 0 0 0 327.3 362.6l94.09 94.09a25 25 0 0 0 35.3-35.3ZM97.92 222.72a124.8 124.8 0 1 1 124.8 124.8a124.95 124.95 0 0 1-124.8-124.8Z"/>
+  	</symbol>
+  	<symbol id="cart" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Cart</title><circle cx="176" cy="416" r="32" fill="currentColor"/><circle cx="400" cy="416" r="32" fill="currentColor"/><path fill="currentColor" d="M456.8 120.78a23.92 23.92 0 0 0-18.56-8.78H133.89l-6.13-34.78A16 16 0 0 0 112 64H48a16 16 0 0 0 0 32h50.58l45.66 258.78A16 16 0 0 0 160 368h256a16 16 0 0 0 0-32H173.42l-5.64-32h241.66A24.07 24.07 0 0 0 433 284.71l28.8-144a24 24 0 0 0-5-19.93Z"/>
+  	</symbol>
+  	<symbol id="long-arrow-alt-left" xmlns="http://www.w3.org/2000/svg" class="la" viewBox="0 0 32 32">
+        <title>Long Arrow Left</title><path fill="currentColor" d="M10.813 9.281L4.093 16l6.72 6.719l1.406-1.438L7.938 17H28v-2H7.937l4.282-4.281z"/>
+    </symbol>
+    <symbol id="long-arrow-alt-right" xmlns="http://www.w3.org/2000/svg" class="la" viewBox="0 0 32 32">
+    	<title>Long Arrow Right</title><path fill="currentColor" d="M21.188 9.281L19.78 10.72L24.063 15H4v2h20.063l-4.282 4.281l1.407 1.438L27.905 16z"/>
+    </symbol>
+  	<symbol id="caret-down" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Caret Down</title><path fill="currentColor" d="m98 190.06l139.78 163.12a24 24 0 0 0 36.44 0L414 190.06c13.34-15.57 2.28-39.62-18.22-39.62h-279.6c-20.5 0-31.56 24.05-18.18 39.62Z"/>
+  	</symbol>
+  	<symbol id="arrow-back" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Arrow Back</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400L100 256l144-144M120 256h292"/>
+  	</symbol>
+  	<symbol id="arrow-forward" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Arrow Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="m268 112l144 144l-144 144m124-144H100"/>
+  	</symbol>
+  	<symbol id="chevron-forward" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="m184 112l144 144l-144 144"/>
+  	</symbol>
+  	<symbol id="play" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Play</title><path fill="currentColor" d="M133 440a35.37 35.37 0 0 1-17.5-4.67c-12-6.8-19.46-20-19.46-34.33V111c0-14.37 7.46-27.53 19.46-34.33a35.13 35.13 0 0 1 35.77.45l247.85 148.36a36 36 0 0 1 0 61l-247.89 148.4A35.5 35.5 0 0 1 133 440Z"/>
+  	</symbol>
+  	<symbol id="menu-sharp" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Menu</title><path fill="currentColor" d="M64 384h384v-42.67H64Zm0-106.67h384v-42.66H64ZM64 128v42.67h384V128Z"/>
+  	</symbol>
+  	<symbol id="close-sharp" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+		<title>Cross</title><path fill="currentColor" d="M400 145.49L366.51 112L256 222.51L145.49 112L112 145.49L222.51 256L112 366.51L145.49 400L256 289.49L366.51 400L400 366.51L289.49 256L400 145.49z"/>
+  	</symbol>
+</svg>
+
+<!-- 加载动画 -->
+<div id="preloader">
+  <div id="loader"></div>
+</div>
+
+<!-- 搜索弹窗 -->
+<div class="search-popup" id="searchPopup">
+  <div class="search-popup-container">
+    <h3 class="my-3">科技搜索</h3>
+    <form role="search" method="get" class="search-form" action="">
+        <input type="search" id="search-form" class="search-field" placeholder="搜索" value="" name="s" />
+        <button type="submit" class="search-submit">
+	        <a href="javascript:void(0)" class="search-button">
+	          <svg class="bi" width="20" height="20"><use xlink:href="#search"></use></svg>
+	        </a>
+	    </button>
+    </form>
+  </div>
+</div>
+
+<!-- 头部 -->
+<header id="header-wrap">
+	<div class="top-header bg-dark">
+		<div class="container py-2 d-flex justify-content-between text-white">
+			<div class="secondary-nav">
+				<ul class="d-flex m-0 list-unstyled">
+					<li class="tech-innovation">
+						<a href="javascript:void(0)" class="tech-text">
+							<span class="tech-icon">⚡</span>
+							PRINT科技商城
+							<span class="tech-glow"></span>
+						</a>
+					</li>
+					<li><a href="about.html">关于我们</a></li>
+					<li><a href="https://github.com/851543">隐私政策</a></li>
+					<li><a href="https://github.com/851543">联系我们</a></li>
+					<li><a href="https://github.com/851543">使用条款</a></li>
+				</ul>
+			</div>
+			<div class="social-share">
+				<ul class="d-flex flex-wrap m-0 list-unstyled">
+					<li><a href="https://github.com/851543"><svg class="bi" width="16" height="16"><use xlink:href="#logo-github"></use></svg></a></li>
+					<li><a href="https://blog.csdn.net/weixin_67623295?type=blog"><svg class="bi" width="16" height="16"><use xlink:href="#logo-csdn"></use></svg></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<nav id="header-nav" class="navbar navbar-expand-lg py-4">
+		<div class="container align-items-center">
+			<a class="navbar-brand" href="index.html">
+				<!-- logo图片 -->
+				<img src="images/logo.png" class="logo">
+			</a>
+			<button class="navbar-toggler d-flex d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+		    	<svg class="bi" width="36" height="36"><use xlink:href="#menu-sharp"></use></svg>
+		 	</button>
+			<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+				<div class="offcanvas-header justify-content-end">
+	              <button type="button" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar">
+	              	<svg class="bi" width="36" height="36"><use xlink:href="#close-sharp"></use></svg>
+	              </button>
+	            </div>
+				<div class="offcanvas-body justify-content-end">
+					<!-- 导航 -->
+					<ul id="navbar" class="navbar-nav d-flex justify-content-end flex-wrap list-unstyled m-0">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">首页</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="shop.html">商店</a>
+						</li>
+					        <li class="nav-item dropdown">
+					         	<a class="nav-link" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="true">文章<svg class="bi" width="10" height="10"><use xlink:href="#caret-down"></use></svg></a>
+								<ul class="dropdown-menu" data-bs-popper="none">
+						          	<li><a href="blog-user.html" class="dropdown-item">用户 </a></li>
+						          	<li><a href="javascript:void(0)" class="dropdown-item">官方 </a></li>
+						        </ul>
+						        </li>
+						<li class="nav-item">
+							<a class="nav-link" href="about.html">关于我们</a>
+						</li>
+						
+						<li class="nav-item">
+		                  <div class="user-items">
+		                    <ul class="d-flex justify-content-end list-unstyled m-0">
+		                      <li>
+		                        <a href="login.html">
+		                          <svg class="bi" width="20" height="20"><use xlink:href="#person"></use></svg>
+		                        </a>
+		                      </li>
+		                      <li>
+		                        <a href="javascript:void(0)" class="search-button">
+		                          <svg class="bi" width="20" height="20"><use xlink:href="#search"></use></svg>
+		                        </a>
+		                      </li>
+		                      <li>
+		                        <a href="cart.html">
+		                          <svg class="bi" width="20" height="20"><use xlink:href="#cart"></use></svg>
+		                        </a>
+		                      </li>
+		                    </ul>
+		                  </div>
+		                </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<section class="single-product padding-large">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row product-preview">
+          <div class="swiper thumb-swiper col-3">
+            <div class="swiper-wrapper d-flex flex-wrap align-content-start">
+              <div class="swiper-slide">
+                <img src="images/product-thumbnail-1.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/product-thumbnail-2.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/product-thumbnail-3.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="swiper large-swiper overflow-hidden col-9">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/product-large-1.jpg" alt="single-product" class="img-fluid">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/product-large-2.jpg" alt="single-product" class="img-fluid">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/product-large-3.jpg" alt="single-product" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="product-info">
+          <div class="element-header">
+            <h2 class="product-title my-3">玩具机器人</h2>
+            <div class="rating-container d-flex align-items-center my-3">
+              <div class="rating" data-rating="1" onclick=rate(1)>
+                <svg class="bi" width="16" height="16"><use xlink:href="#star-fill"></use></svg>
+              </div>
+              <div class="rating" data-rating="1" onclick=rate(1)>
+                <svg class="bi" width="16" height="16"><use xlink:href="#star-fill"></use></svg>
+              </div>
+              <div class="rating" data-rating="1" onclick=rate(1)>
+                <svg class="bi" width="16" height="16"><use xlink:href="#star-fill"></use></svg>
+              </div>
+              <div class="rating" data-rating="1" onclick=rate(1)>
+                <svg class="bi" width="16" height="16"><use xlink:href="#star-half"></use></svg>
+              </div>
+              <div class="rating" data-rating="1" onclick=rate(1)>
+                <svg class="bi" width="16" height="16"><use xlink:href="#star-empty"></use></svg>
+              </div>
+              <span class="rating-count">(5.0)</span>
+            </div>
+          </div>
+          <div class="product-price my-3">
+            <strong>¥388.80</strong>
+            <del>¥388.80</del>
+          </div>
+          <p>这是一款精心设计的玩具机器人。采用优质材料制作，安全耐用，适合儿童玩耍。外观时尚，功能丰富，能够激发孩子的想象力和创造力。</p>
+          <div class="cart-wrap margin-small">
+            <div class="color-options product-select my-3">
+              <div class="color-toggle d-flex flex-wrap align-items-center" data-option-index="0">
+                <h5 class="item-title mb-0 me-3">颜色:</h5>
+                <ul class="select-list list-unstyled d-flex mb-0">
+                  <li class="select-item" data-val="Green" title="绿色">
+                    <a href="javascript:void(0)">绿色</a>
+                  </li>
+                  <li class="select-item" data-val="Orange" title="橙色">
+                    <a href="javascript:void(0)">橙色</a>
+                  </li>
+                  <li class="select-item" data-val="Red" title="红色">
+                    <a href="javascript:void(0)">红色</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="swatch product-select d-flex flex-wrap align-items-center my-3" data-option-index="1">
+              <h5 class="item-title mb-0 me-3">尺寸:</h5>
+              <ul class="select-list list-unstyled d-flex mb-0">
+                <li data-value="S" class="select-item">
+                  <a href="javascript:void(0)">S</a>
+                </li>
+                <li data-value="M" class="select-item">
+                  <a href="javascript:void(0)">M</a>
+                </li>
+                <li data-value="L" class="select-item">
+                  <a href="javascript:void(0)">L</a>
+                </li>
+              </ul>
+            </div>
+            <div class="product-quantity my-3">
+              <div class="item-title">
+                <l>库存: 2件</l>
+              </div>
+              <div class="stock-button-wrap d-flex flex-wrap align-items-center">
+                <div class="product-quantity d-flex align-items-center">
+                  <h5 class="item-title mb-0 me-3">数量:</h5>                  
+
+                  <div class="cart-product-quantity">
+                      <input type="number" class="form-control" value="1" min="1" max="10" step="1" data-decimals="0" required>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="action-buttons my-4 d-flex flex-wrap">
+              <a href="checkout.html" class="button btn-bg-dark me-2">立即购买</a>
+              <a href="javascript:void(0)" class="button btn-bg-dark add-to-cart" onclick="flyToCart(this)">
+                加入购物车
+              </a>
+            </div>
+          </div>
+          <div class="meta-product margin-small">
+            <div class="meta-item d-flex flex-wrap align-items-center my-3">
+              <h5 class="item-title mb-0 me-3">商品编号:</h5>
+              <ul class="select-list list-unstyled d-flex no-margin">
+                <li data-value="S" class="select-item">1223</li>
+              </ul>
+            </div>
+            <div class="meta-item d-flex flex-wrap align-items-center my-3">
+              <h5 class="item-title mb-0 me-3">分类:</h5>
+              <ul class="select-list list-unstyled d-flex no-margin">
+                <li data-value="S" class="select-item">
+                  <a href="javascript:void(0)">玩具</a>,
+                </li>
+                <li data-value="S" class="select-item">
+                  <a href="javascript:void(0)">机器人</a>,
+                </li>
+                <li data-value="S" class="select-item">
+                  <a href="javascript:void(0)">科技</a>
+                </li>
+              </ul>
+            </div>
+            <div class="meta-item d-flex flex-wrap align-items-center my-3">
+              <h5 class="item-title mb-0 me-3">标签:</h5>
+              <ul class="select-list list-unstyled d-flex no-margin">
+                <li data-value="S" class="select-item">
+                  <a href="javascript:void(0)">玩具</a>,
+                </li>
+                <li data-value="S" class="select-item">
+                  <a href="javascript:void(0)">小型</a>,
+                </li>
+                <li data-value="S" class="select-item">
+                  <a href="javascript:void(0)">耐用</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="product-tabs">
+  <div class="container">
+    <div class="row">
+      <div class="tabs-listing">
+        <nav>
+          <div class="nav nav-tabs d-flex justify-content-center py-3" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">商品描述</button>
+            <button class="nav-link" id="nav-information-tab" data-bs-toggle="tab" data-bs-target="#nav-information" type="button" role="tab" aria-controls="nav-information" aria-selected="false">附加信息</button>
+            <button class="nav-link" id="nav-shipping-tab" data-bs-toggle="tab" data-bs-target="#nav-shipping" type="button" role="tab" aria-controls="nav-shipping" aria-selected="false">配送与退货</button>
+            <button class="nav-link" id="nav-review-tab" data-bs-toggle="tab" data-bs-target="#nav-review" type="button" role="tab" aria-controls="nav-review" aria-selected="false">评价</button>
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <p>商品描述</p>
+            <p>这是一款精心设计的玩具机器人，采用优质材料制作。具有出色的做工和耐用性，适合各年龄段的儿童玩耍。造型新颖独特，能够激发儿童的想象力和创造力。
+            <ul>
+              <li>高品质环保材料，安全可靠</li>
+              <li>精密机械结构，灵活耐用</li>
+              <li>智能互动功能，趣味十足</li>
+            </ul> 
+            产品通过严格的质量检测，确保每个细节都完美呈现。丰富的互动功能和精美的外观设计，让孩子爱不释手。这不仅是一个玩具，更是孩子成长路上的好伙伴。</p>
+          </div>
+          <div class="tab-pane fade" id="nav-information" role="tabpanel" aria-labelledby="nav-information-tab">
+            <p>舒适性与品质保证</p>
+            <p>本产品采用人体工程学设计，确保使用舒适。每个零件都经过严格的品控，以确保最佳的使用体验。我们注重产品的每个细节，力求为您提供最优质的产品。所有材料都通过安全认证，让您能够放心使用。</p>
+          </div>
+          <div class="tab-pane fade" id="nav-shipping" role="tabpanel" aria-labelledby="nav-shipping-tab">
+            <p>退货政策</p>
+            <p>如果您对商品不满意，可在收货后7天内申请退货。商品需保持原包装完整，未经使用。退货运费由买家承担。</p>
+            <p>特殊情况下，如商品存在质量问题，请在收货后48小时内联系客服。</p>
+            <p>配送说明</p>
+            <p>全国范围内免费配送，偏远地区可能收取额外运费。正常情况下，订单将在3-5个工作日内发出。如遇特殊情况，我们会及时与您联系。请确保收货地址准确无误，以免影响配送。</p>
+          </div>
+          <div class="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab">
+            <div class="review-box review-style d-flex flex-wrap justify-content-between">
+              <div class="review-item d-flex">
+                <div class="image-holder">
+                  <img src="images/pe.png" alt="评价图片" height="100" width="100">
+                </div>
+                <div class="review-content">
+                  <div class="rating-container d-flex align-items-center">
+                    <div class="rating">
+                      <svg class="bi" width="16" height="16"><use xlink:href="#star-fill"></use></svg>
+                    </div>
+                    <div class="rating">
+                      <svg class="bi" width="16" height="16"><use xlink:href="#star-fill"></use></svg>
+                    </div>
+                    <div class="rating">
+                      <svg class="bi" width="16" height="16"><use xlink:href="#star-fill"></use></svg>
+                    </div>
+                    <div class="rating">
+                      <svg class="bi" width="16" height="16"><use xlink:href="#star-fill"></use></svg>
+                    </div>
+                    <div class="rating">
+                      <svg class="bi" width="16" height="16"><use xlink:href="#star-fill"></use></svg>
+                    </div>
+                    <span class="rating-count">(5.0)</span>
+                  </div>
+                  <div class="review-header">
+                    <span class="author-name">彭彭</span>
+                    <span class="review-date">– 2024/05/07</span>
+                  </div>
+                  <p>产品质量非常好，孩子很喜欢。做工精细，功能齐全，值得推荐！</p>
+                </div>
+              </div>
+              <div class="review-item d-flex">
+                <div class="image-holder">
+                  <img src="images/zhu.jpg" alt="评价图片" height="100" width="100">
+                </div>                    
+                <div class="review-content">
+                  <div class="rating-container d-flex align-items-center">
+                    <div class="rating">
+                      <svg class="bi" width="16" height="16"><use xlink:href="#star-fill"></use></svg>
+                    </div>
+                    <div class="rating">
+                      <svg class="bi" width="16" height="16"><use xlink:href="#star-fill"></use></svg>
+                    </div>
+                    <div class="rating">
+                      <svg class="bi" width="16" height="16"><use xlink:href="#star-fill"></use></svg>
+                    </div>
+                    <div class="rating">
+                      <svg class="bi" width="16" height="16"><use xlink:href="#star-fill"></use></svg>
+                    </div>
+                    <div class="rating">
+                      <svg class="bi" width="16" height="16"><use xlink:href="#star-fill"></use></svg>
+                    </div>
+                    <span class="rating-count">(5.0)</span>
+                  </div>
+                  <div class="review-header">
+                    <span class="author-name">猪猪</span>
+                    <span class="review-date">– 2024/08/25</span>
+                  </div>
+                  <p>包装很好，送货速度快，玩具很精致，孩子玩得很开心！</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </divf
+    </div>
+  </div>
+</section>
+
+<section id="product-for-sale" class="position-relative margin-large">
+  <div class="container">
+    <div class="title-wrap d-flex justify-content-between">     
+      <div class="section-header">
+        <h4 class="elementary-title">猜您喜欢</h4>
+      </div>
+      <a href="shop.html" class="button">前往商店<svg class="bi" width="18" height="18"><use xlink:href="#chevron-forward"></use></svg></a>
+    </div>
+    <div class="row">
+
+      <div class="col-md-3 product-card link-effect">
+        <figure class="zoom-effect">
+          <a href="single-product.html" class="zoom-in"><img src="images/product8.jpg" alt="stories" class="lgpostImg img-fluid"></a>
+        </figure>
+        <div class="story-title-wrap my-3 d-flex justify-content-between">
+          <h3 class="story-title"><a href="single-product.html">游戏手柄</a></h3>
+          <a class="price" href="javascript:void(0)" data-after="加入购物车"><span>¥1440</span></a>
+        </div>
+      </div>
+      <div class="col-md-3 product-card link-effect">
+        <figure class="zoom-effect">
+          <a href="single-product.html" class="zoom-in"><img src="images/product9.jpg" alt="stories" class="lgpostImg img-fluid"></a>
+        </figure>
+        <div class="story-title-wrap my-3 d-flex justify-content-between">
+          <h3 class="story-title"><a href="single-product.html">游戏耳机</a></h3>
+          <a class="price" href="javascript:void(0)" data-after="加入购物车"><span>¥10800</span></a>
+        </div>
+      </div>
+      <div class="col-md-3 product-card link-effect">
+        <figure class="zoom-effect">
+          <a href="single-product.html" class="zoom-in"><img src="images/product7.jpg" alt="stories" class="lgpostImg img-fluid"></a>
+        </figure>
+        <div class="story-title-wrap my-3 d-flex justify-content-between">
+          <h3 class="story-title"><a href="single-product.html">苹果手机</a></h3>
+          <a class="price" href="javascript:void(0)" data-after="加入购物车"><span>¥5760</span></a>
+        </div>
+      </div>
+      <div class="col-md-3 product-card link-effect">
+        <figure class="zoom-effect">
+          <a href="single-product.html" class="zoom-in"><img src="images/product6.jpg" alt="stories" class="lgpostImg img-fluid"></a>
+        </figure>
+        <div class="story-title-wrap my-3 d-flex justify-content-between">
+          <h3 class="story-title"><a href="single-product.html">单反相机</a></h3>
+          <a class="price" href="javascript:void(0)" data-after="加入购物车"><span>¥8640</span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 底部 -->
+<footer id="footer" class="padding-medium">
+  
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-3 mb-5">
+        <a href="index.html"><img src="images/logo-light.png" class="logo"></a>
+        <p>伟大的公司都是把东西越做越便宜，把每一份精力都专心投入做好产品，让用户付出的每一分钱都足有所值。</p>
+      </div>
+
+      <div class="col-md-3 mb-5">
+        <h5>更多内容</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">iPhones</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">MacBook</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">最佳笔记本电脑</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">最佳电视优惠</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">最佳Macbook优惠</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">eBay优惠券</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Amazon优惠券</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">笔记本电脑优惠券</a></li>	          
+        </ul>
+      </div>
+
+      <div class="col-md-3 mb-5">
+        <h5>关于我们</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">广告</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">更多关于我们</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">时事通讯</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">职业发展</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">帮助中心</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">联系我们</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">站点地图</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">许可证</a></li>	          
+        </ul>
+      </div>
+
+      <div class="col-md-3 mb-5">
+        <h5>政策</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">隐私政策</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">使用条款</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Cookies</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">信息</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">合规性</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">GDPR政策</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">销售信息</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="nav-link">版权</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  	<!-- 添加呼吸动画分隔线 -->
+	<div class="breathing-line"></div>
+</footer>
+
+<!-- 返回顶部火箭按钮 -->
+<button id="backToTop" class="btn btn-primary back-to-top" title="返回顶部">
+  <i class="bi bi-rocket-takeoff"></i>
+</button>
+
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/script.js"></script>
+<script>
+  function flyToCart(button) {
+  // 获取当前商品的主图
+  const productImg = document.querySelector('.large-swiper .swiper-slide-active img');
+  // 获取购物车图标
+  const cart = document.querySelector('.d-flex .justify-content-end li:last-child');
+  
+  // 创建飞行图片
+  const flyImg = productImg.cloneNode();
+  flyImg.classList.add('fly-img');
+  
+  // 获取起始和结束位置
+  const startPos = productImg.getBoundingClientRect();
+  const endPos = cart.getBoundingClientRect();
+  
+  // 设置初始样式
+  Object.assign(flyImg.style, {
+    'position': 'fixed',
+    'z-index': '1000',
+    'left': startPos.left + 'px',
+    'top': startPos.top + 'px',
+    'width': '100px',
+    'height': '100px',
+    'object-fit': 'cover',
+    'border-radius': '50%',
+  });
+  
+  document.body.appendChild(flyImg);
+  
+  // 下抛物线动画
+  const start = {
+    x: startPos.left,
+    y: startPos.top
+  };
+  
+  const end = {
+    x: endPos.left,
+    y: endPos.top
+  };
+  
+  // 控制点（抛物线底点）
+  const control = {
+    x: (start.x + end.x) / 2,
+    y: Math.max(start.y, end.y) + 100 // 控制下抛曲线的深度
+  };
+  
+  const duration = 800;
+  const startTime = Date.now();
+  
+  function animate() {
+    const progress = (Date.now() - startTime) / duration;
+    
+    if (progress >= 1) {
+      flyImg.remove();
+      cart.classList.add('cart-shake');
+      setTimeout(() => cart.classList.remove('cart-shake'), 500);
+      return;
+    }
+    
+    // 二次贝塞尔曲线
+    const t = progress;
+    const x = Math.pow(1 - t, 2) * start.x + 2 * (1 - t) * t * control.x + Math.pow(t, 2) * end.x;
+    const y = Math.pow(1 - t, 2) * start.y + 2 * (1 - t) * t * control.y + Math.pow(t, 2) * end.y;
+    
+    Object.assign(flyImg.style, {
+      'left': x + 'px',
+      'top': y + 'px',
+      'width': (100 - 50 * progress) + 'px',
+      'height': (100 - 50 * progress) + 'px',
+      'opacity': 1 - 0.5 * progress
+    });
+    
+    requestAnimationFrame(animate);
+  }
+  
+  requestAnimationFrame(animate);
+}
+</script>
+</body>
+</html>
